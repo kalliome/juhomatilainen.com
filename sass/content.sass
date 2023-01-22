@@ -1,0 +1,48 @@
+.content-inner
+  max-width: rem(577px)
+  width: 100%
+  margin: auto
+
+.content-light-green
+  background: $medium
+  a.arrow-button,
+  h2,
+  h1,
+  h3
+    color: $light
+
+.content-medium-grey
+  background: $grey
+  a.arrow-button
+    color: $light
+
+.content-dark
+  background: $dark
+  color: $light
+
+.content-inner-large
+  margin: auto
+  +overSmall()
+    padding: rem(40px 40px)
+
+.text-center
+  text-align: center
+
+.content-inner,
+.content-inner-large
+  img
+    display: block
+    max-width: 100%
+    height: auto
+
+.content-image
+  display: flex
+  align-items: center
+  justify-content: center
+
+.content-image--service
+  height: rem(246px)
+  margin-bottom: rem(20px)
+
+.single-no-margin > *:first-child:last-child
+  margin: 0

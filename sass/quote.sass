@@ -1,0 +1,46 @@
+.quotes
+  display: flex
+  flex-wrap: wrap
+
+.quote
+  flex: 0 0 100%
+  padding: rem(100px 60px)
+  background: darken($grey, 2%)
+  color: $black
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  gap: rem(16px)
+  position: relative
+  line-height: 1.2
+  transition: .2s all ease-in-out
+  +overSmall()
+    font-size: rem(20px)
+  &:before
+    content: '"'
+    position: absolute
+    top: rem(30px)
+    left: rem(30px)
+    font-size: rem(80px)
+    color: rgba(#000, .1)
+  &:nth-child(2n)
+    background: lighten($grey, 2%)
+  &:hover
+    background: $light
+  +minWidth(600px)
+    flex: 0 0 50%
+  +minWidth(1000px)
+    flex: 0 0 33.33%
+
+.quote blockquote
+  margin: 0
+  padding: 0
+
+.quote p
+  opacity: .8
+  width: 100%
+  margin-bottom: 0
+  font-size: rem(16px)
+  &:before
+    content: "- "

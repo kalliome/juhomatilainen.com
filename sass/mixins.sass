@@ -1,0 +1,54 @@
+=tiny()
+  @media screen and (max-width: 400px)
+    @content
+
+=small()
+  @media screen and (max-width: 760px)
+    @content
+
+=medium()
+  @media screen and (max-width: 1000px)
+    @content
+
+=overSmall()
+  @media screen and (min-width: 760px)
+    @content
+
+=overMedium()
+  @media screen and (min-width: 1000px)
+    @content
+
+=navBreak()
+  @media screen and (min-width: 1010px)
+    @content
+
+=overNavBreak()
+  @media screen and (min-width: 900px)
+    @content
+
+=minWidth($width)
+  @media screen and (min-width: $width)
+    @content
+
+=maxWidth($width)
+  @media screen and (max-width: $width)
+    @content
+
+=breakpoint($width)
+  @media screen and (max-width: $width)
+    @content
+
+=letter-spacing($spacing)
+  letter-spacing: $spacing * 0.001em
+
+=mobile()
+  @media screen and (max-width: 1000px)
+    @content
+
+=tablet()
+  @media screen and (max-width: 1050px)
+    @content
+
+=desktop()
+  @media screen and (min-width: 1000px)
+    @content

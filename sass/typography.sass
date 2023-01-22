@@ -1,0 +1,58 @@
+*, *:before, *:after
+  box-sizing: border-box
+
+body
+  font-family: 'Work Sans', sans-serif
+  font-size: 16px
+  line-height: 1.2
+  color: $black
+
+h1,
+h2
+  font-weight: 400
+  margin-top: 0
+  margin-bottom: 1em
+  line-height: 1.2em
+  font-size: rem(32px)
+  +overSmall()
+    font-size: rem(60px)
+
+h3
+  font-weight: 400
+  margin-top: 0
+  margin-bottom: 1em
+  line-height: 1.2em
+  font-size: rem(26px)
+  +overSmall()
+    font-size: rem(40px)
+
+p.lead
+  margin-bottom: 3em
+  +overSmall()
+    font-size: rem(20px)
+    line-height: rem(28px)
+    margin-top: 0
+
+.arrow-button
+  text-decoration: none
+  font-size: rem(16px)
+  line-height: rem(20px)
+  +overSmall()
+    font-size: rem(20px)
+    line-height: rem(28px)
+  display: inline-block
+  position: relative
+  padding-left: rem(16px)
+  color: inherit
+  &:before
+    content: ""
+    display: block
+    border: rem(8px) solid transparent
+    border-left-color: #ff0000
+    position: absolute
+    top: 50%
+    left: 0
+    margin-top: rem(-8px)
+
+a.arrow-button:hover
+  text-decoration: underline

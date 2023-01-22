@@ -1,0 +1,30 @@
+.footer
+  background: #000000
+  padding: rem(80px 20px)
+  font-size: rem(20px)
+  +overSmall()
+    padding: rem(165px 20px)
+  a
+    color: #707070
+    text-decoration: none
+    &:hover
+      color: $light
+
+.footer-inner
+  display: flex
+  flex-direction: column
+  align-items: center
+  gap: rem(40px)
+
+.footer-logo
+  img
+    display: block
+    width: rem(250px)
+    max-width: 100%
+    height: rem(20px)
+
+.footer-contact
+  text-align: center
+
+.footer-linkedin a:hover path
+  fill: $light

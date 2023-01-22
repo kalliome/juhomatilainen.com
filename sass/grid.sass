@@ -1,0 +1,123 @@
+@use 'sass:math'
+
+//.grid
+
+.h800
+  +overSmall()
+    min-height: rem(800px)
+
+.grid-row
+  +overSmall()
+    display: flex
+    .grid.reverse &
+      flex-direction: row-reverse
+
+[class*='grid-item-']
+  display: flex
+
+@for $i from 1 to 13
+  .grid-item-#{$i}
+    +overSmall()
+      width: math.div(math.div(100, 12), 100) * $i * 100%
+
+// Utils
+
+// Image
+.grid-image
+  position: relative
+  +small()
+    min-height: rem(300px)
+  img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+// Video
+
+.video-background
+  +small()
+    min-height: rem(300px)
+  position: relative
+  background: #333
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+// Content
+
+.grid-content
+  padding: rem(60px 30px)
+  +overSmall()
+    padding: rem(75px)
+  display: flex
+  .grid.reverse [class*='grid-item-']:first-child &
+    justify-content: flex-end
+
+.grid-item-6,
+.grid-item-7,
+.grid-item-8,
+.grid-item-9,
+.grid-item-10,
+.grid-item-11,
+.grid-item-12
+  .grid-content
+    padding: rem(30px)
+    +overSmall()
+      padding: rem(100px 120px)
+
+.grid-item-project
+  +small()
+    width: 100%
+    height: rem(300px)
+  position: relative
+  a, a img, a:after
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+  a
+    color: $light
+  a img
+    object-fit: cover
+  .title
+    position: absolute
+    bottom: 0
+    left: 0
+    background: $dark
+    z-index: 2
+    padding: rem(12px 20px)
+    +overSmall()
+      padding: rem(18px 40px)
+  +overSmall()
+    a:after
+      content: ""
+      background: rgba(#fff, .5)
+    a:after,
+    .title
+      opacity: 0
+      visibility: hidden
+      transition: .3s all ease-in-out
+    .title
+      bottom: auto
+      top: 50%
+      left: 50%
+      transform: translate(-50%, calc(-50% + 1em))
+    a:hover
+      .title, &:after
+        opacity: 1
+        visibility: visible
+      .title
+        transform: translate(-50%, -50%)
+
+.grid-item-split
+  flex-direction: column
+  > div
+    +overSmall()
+      flex: 1

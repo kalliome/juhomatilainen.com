@@ -38,7 +38,7 @@ $(function () {
       .children()
       .each(function (el) {
         $(this).attr("data-aos", "fade-up");
-        $(this).attr("data-aos-delay", (count * 40).toString());
+        $(this).attr("data-aos-delay", (count * 50).toString());
         count++;
       });
   });
@@ -47,7 +47,7 @@ $(function () {
   $(".quote").each(function () {
     $("blockquote, p", this).each(function (el) {
       $(this).attr("data-aos", "fade-up");
-      $(this).attr("data-aos-delay", (count * 80).toString());
+      $(this).attr("data-aos-delay", (count * 100).toString());
     });
     count++;
   });

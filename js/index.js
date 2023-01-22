@@ -47,7 +47,7 @@ $(function () {
   $(".quote").each(function () {
     $("blockquote, p", this).each(function (el) {
       $(this).attr("data-aos", "fade-up");
-      $(this).attr("data-aos-delay", (count * 100).toString());
+      $(this).attr("data-aos-delay", ((count % 3) * 100).toString());
     });
     count++;
   });
